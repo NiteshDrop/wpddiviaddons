@@ -1,0 +1,46 @@
+.wpda_post_thumbnail {
+	overflow: hidden;
+}
+
+.wpda_post_thumbnail img {
+	height: 250px;
+	width:  100%;
+	object-fit: cover;
+}
+
+.wpda_post_title {
+	margin-top: 25px;
+	font-weight: 600;
+	font-size: 25px;
+	color: #303C64;
+}
+
+.wpda_post_date {
+	margin-top: 15px;
+	color: #303C64;
+}
+
+.owl-nav {
+	margin: 0;
+	position: absolute;
+	top: -80px;
+	right: 0;
+}
+
+.owl-prev span,
+.owl-next span {
+	font-size: 30px;
+	color: #303C64;
+	background-color: tan;
+	padding: 4px 18px 10px 18px;
+}
+
+.owl-prev:hover span,
+.owl-next:hover span {
+	color: aliceblue;
+	background-color: #303C64;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+	margin: 0.2px;
+}
