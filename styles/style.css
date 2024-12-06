@@ -1,9 +1,11 @@
 .wpda_post_thumbnail {
 	overflow: hidden;
+	height: 250px;
+	background-color: #eaeaea;
 }
 
 .wpda_post_thumbnail img {
-	height: 250px;
+	height: 100%;
 	width:  100%;
 	object-fit: cover;
 }
@@ -31,7 +33,7 @@
 .owl-next span {
 	font-size: 30px;
 	color: #303C64;
-	background-color: tan;
+	background-color: #f5f5f5;
 	padding: 4px 18px 10px 18px;
 }
 

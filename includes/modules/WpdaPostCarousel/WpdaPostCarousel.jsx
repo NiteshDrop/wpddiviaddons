@@ -49,7 +49,6 @@ class WpdaPostCarousel extends Component {
 							</div>
 							<div className="wpda_post_title">
 								{PostPerPage}
-								
 							</div>
 							<div className="wpda_post_date">
 								{PostCategory}

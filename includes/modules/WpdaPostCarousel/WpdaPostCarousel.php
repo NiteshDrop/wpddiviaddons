@@ -64,22 +64,21 @@ class WPDA_PostCarousel extends ET_Builder_Module {
 				'option_category' => 'basic_option',
 				'description'     => esc_html__( 'Select Post Category To Show On The Carousel.', 'wpda-wpddiviaddons' ),
 				'toggle_slug'     => 'main_content',
+				'default'					=> '',
 				'options'					=> self::wpda_get_category_list()
 			),
 		);
 	}
 
-	static function wpda_render_post_carousel($post_type,$post_per_page,$post_category) {
+	public function wpda_render_post_carousel() {
 
 		$args = [
-			'post_type'      => $post_type,
-			'posts_per_page' => $post_per_page,
-			'category_name'	 => $post_category
+			'post_type'      => $this->props['posttype'],
+			'posts_per_page' => $this->props['postperpage'],
+			'category_name'	 => $this->props['postcategory']
 		];
-
 		$query = new WP_Query($args);
 		ob_start();
-
 		if($query -> have_posts()) :
 	?>
 	<div class="blog-carousel owl-carousel owl-theme">
@@ -103,14 +102,18 @@ class WPDA_PostCarousel extends ET_Builder_Module {
 		<?php
 			endwhile;
 			wp_reset_postdata();
-			return ob_get_clean();
-		?>
+			?>
 	</div>
 	<?php
+		else :
+			?>
+	<div><p>No post found.</p></div>
+	<?php
 		endif;
+		return ob_get_clean();
 	}
 	public function render( $attrs, $content, $render_slug ) {
-		return sprintf(self::wpda_render_post_carousel($this->props['posttype'], $this->props['postperpage'], $this->props['postcategory']), $render_slug);
+		return sprintf($this -> wpda_render_post_carousel(), $render_slug);
 	}
 }
 

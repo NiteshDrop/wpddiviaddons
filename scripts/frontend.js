@@ -9,7 +9,7 @@ $(document).ready(function () {
 		nav: true,
 		dots: false,
 		responsive: {
-			0: {
+			480: {
 				items: 1,
 				nav: true,
 				dots: false
@@ -18,6 +18,9 @@ $(document).ready(function () {
 				items: 2
 			},
 			1024: {
+				items: 3
+			},
+			1300: {
 				items: 3
 			}
 		}
