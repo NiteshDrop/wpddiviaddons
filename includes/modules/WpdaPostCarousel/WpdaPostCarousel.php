@@ -64,7 +64,7 @@ class WPDA_PostCarousel extends ET_Builder_Module {
 				'option_category' => 'basic_option',
 				'description'     => esc_html__( 'Select Post Category To Show On The Carousel.', 'wpda-wpddiviaddons' ),
 				'toggle_slug'     => 'main_content',
-				'default'					=> '',
+				'default'					=> 'Uncategorized',
 				'options'					=> self::wpda_get_category_list()
 			),
 		);
@@ -89,20 +89,23 @@ class WPDA_PostCarousel extends ET_Builder_Module {
 		<div class="item">
 			<div class="carousel_content">
 				<div class="wpda_post_thumbnail">
-					<?php the_post_thumbnail('medium') ?>
+					<?php the_post_thumbnail('full'); ?>
 				</div>
 				<div class="wpda_post_title">
 					<?php the_title(); ?>
 				</div>
+				<div class="wpda_post_content">
+					<?php the_excerpt(); ?>
+				</div>
 				<div class="wpda_post_date">
-					<?php echo get_the_date(); ?>
+					<span><?php echo get_the_date(); ?></span>
 				</div>
 			</div>
 		</div>
 		<?php
 			endwhile;
 			wp_reset_postdata();
-			?>
+		?>
 	</div>
 	<?php
 		else :
@@ -112,8 +115,8 @@ class WPDA_PostCarousel extends ET_Builder_Module {
 		endif;
 		return ob_get_clean();
 	}
-	public function render( $attrs, $content, $render_slug ) {
-		return sprintf($this -> wpda_render_post_carousel(), $render_slug);
+	public function render($attrs, $content, $render_slug ) {
+		return sprintf($this -> wpda_render_post_carousel(), '', $render_slug);
 	}
 }
 

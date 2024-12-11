@@ -3,7 +3,7 @@
 Plugin Name: Wpddiviaddons
 Plugin URI:  https://www.wpdrops.com
 Description: Divi Addons By WP Drops
-Version:     1.0.0
+Version:     1.0.3
 Author:      WP Drops
 Author URI:  https://www.wpdrops.com
 License:     GPL2
@@ -35,7 +35,7 @@ if ( ! function_exists( 'wpda_initialize_extension' ) ):
 
 define('WPDA_POST_CAROUSEL_FILE', __FILE__);
 define('WPDA_POST_CAROUSEL_BASE', plugin_basename(__FILE__));
-define('WPDA_POST_CAROUSEL_VERSION', '1.0.0');
+define('WPDA_POST_CAROUSEL_VERSION', '1.0.3');
 define('WPDA_POST_CAROUSEL_DIR', plugin_dir_path(__FILE__));
 define('WPDA_POST_CAROUSEL_URL', plugin_dir_url(__FILE__));
 

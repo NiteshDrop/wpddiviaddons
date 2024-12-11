@@ -5,7 +5,7 @@ $(document).ready(function () {
 		loop: true,
 		margin: 50,
 		autoplay: true,
-		autoplayTimeout: 3000,
+		autoplayTimeout: 7000,
 		nav: true,
 		dots: false,
 		responsive: {

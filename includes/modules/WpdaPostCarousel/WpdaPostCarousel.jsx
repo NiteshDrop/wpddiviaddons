@@ -20,7 +20,7 @@ class WpdaPostCarousel extends Component {
 			nav: true,
 			dots: false,
 			responsive: {
-				0: {
+				480: {
 					items: 1,
 					nav: true,
 					dots: false
@@ -29,6 +29,9 @@ class WpdaPostCarousel extends Component {
 					items: 2
 				},
 				1024: {
+					items: 3
+				},
+				1300: {
 					items: 3
 				}
 			}
