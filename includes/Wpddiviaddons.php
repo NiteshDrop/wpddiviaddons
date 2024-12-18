@@ -27,7 +27,7 @@ class WPDA_Wpddiviaddons extends DiviExtension {
 	 *
 	 * @var string
 	 */
-	public $version = '1.0.3';
+	public $version = '1.0.0';
 
 	/**
 	 * WPDA_Wpddiviaddons constructor.
@@ -49,9 +49,9 @@ class WPDA_Wpddiviaddons extends DiviExtension {
 
 		wp_enqueue_script( 'wpda-frontend-js', WPDA_POST_CAROUSEL_URL . 'scripts/frontend.js', array('jquery'), null, true);
 		wp_enqueue_script( 'owl-carousel-js', WPDA_POST_CAROUSEL_URL . 'scripts/owl.carousel.min.js', array('jquery'), '2.3.4', true);
-		wp_enqueue_style( 'wpda-frontend-style', WPDA_POST_CAROUSEL_URL . 'styles/style.css');
-		wp_enqueue_style( 'owl-carousel', WPDA_POST_CAROUSEL_URL . 'styles/owl.carousel.min.css');
-		wp_enqueue_style( 'owl-carousel-default', WPDA_POST_CAROUSEL_URL . 'styles/owl.theme.default.min.css');
+		wp_enqueue_style( 'wpda-frontend-style', WPDA_POST_CAROUSEL_URL . 'styles/style.css',array(), $version,'all');
+		wp_enqueue_style( 'owl-carousel', WPDA_POST_CAROUSEL_URL . 'styles/owl.carousel.min.css',array(), $version,'all');
+		wp_enqueue_style( 'owl-carousel-default', WPDA_POST_CAROUSEL_URL . 'styles/owl.theme.default.min.css',array(), $version,'all');
 	}
 }
 
